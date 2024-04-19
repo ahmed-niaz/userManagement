@@ -29,7 +29,10 @@ const handleUser = (e) =>{
  })
  .then(res => res.json())
  .then(data =>{
-  console.log(`inside post response ${data}`);
+  console.log('inside post response',data);
+  const newUser = [...users,data];
+  setUser(newUser)
+  form.reset()
  })
 }
   return (
